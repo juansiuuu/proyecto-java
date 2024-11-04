@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.CrudreservasController">
+   <children>
+      <Label layoutX="104.0" layoutY="20.0" text="Gestion reservas">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechainicio" layoutX="138.0" layoutY="68.0" />
+      <Label layoutX="14.0" layoutY="72.0" text="Fecha inicio" />
+      <Label layoutX="14.0" layoutY="106.0" text="Fecha fin" />
+      <DatePicker fx:id="Fechafin" layoutX="138.0" layoutY="102.0" />
+      <ChoiceBox fx:id="seleccionarCliente" layoutX="138.0" layoutY="139.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="14.0" layoutY="143.0" text="Cliente" />
+      <Label layoutX="14.0" layoutY="179.0" text="Vehiculo" />
+      <ChoiceBox fx:id="seleccionarVehiculo" layoutX="138.0" layoutY="175.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="7.0" layoutY="211.0" mnemonicParsing="false" onAction="#CalcularCosto" text="Calcular costo" />
+      <TextField fx:id="costoCalculado" layoutX="138.0" layoutY="211.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="18.0" layoutY="451.0" mnemonicParsing="false" onAction="#agregarReserva" text="Agregar reserva">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="128.0" layoutY="451.0" mnemonicParsing="false" onAction="#actualizarReserva" text="Actualizar Reserva">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="250.0" layoutY="451.0" mnemonicParsing="false" onAction="#eliminarReserva" text="Eliminar Reserva">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <TableView fx:id="listareservas" layoutX="2.0" layoutY="249.0" prefHeight="200.0" prefWidth="342.0">
+        <columns>
+          <TableColumn prefWidth="53.0" text="Cliente" />
+          <TableColumn prefWidth="65.0" text="Vehiculo" />
+          <TableColumn prefWidth="83.0" text="Fecha inicio" />
+          <TableColumn prefWidth="58.0" text="Fecha fin" />
+          <TableColumn prefWidth="82.0" text="Costo total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
